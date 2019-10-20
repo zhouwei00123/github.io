@@ -5,17 +5,50 @@
 <title>Zhouwei</title>
 <style>
 body{background-color: #eee;}
+
 </style>
 </head>
 <body>
-<header>
+<header class="h bc">
     Hello Word!
+    <span id="keyview"></span>
 </header>
+<<<<<<< HEAD
+<main class="h bc">
+    I'm Zhouwei
+=======
 <main>
-    I'm ajesdfsf
+    I'm aj
+>>>>>>> 99b923b50ec29d52f3ffd850713964e205d5b181
 </main>
-<footer>
-    
+<footer class="h bc">
+    footer
 </footer>
+<script>
+
+/**
+ * @method {Function} onKMeyDown
+ * @param {Object} e
+ * @deprecated ....
+ */
+
+var onKeyDown = e => {
+    // 回车
+    if( e.keyCode == 13 ) alert( 'You press Enter key.' );
+
+    // 全屏
+    else if ( e.key == 'a' ) document.body.requestFullscreen();
+
+    // 解绑
+    else if ( e.key == 'k' ) window.removeEventListener( 'keydown', onKeyDown );
+
+    // 输出
+    else keyview.textContent = e.keyCode + ' = ' + e.key;
+    
+};
+
+window.addEventListener('keydown', onKeyDown);
+
+</script>
 </body>
 </html>
